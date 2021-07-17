@@ -1,0 +1,11 @@
+language: java
+jdk:
+- openjdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: IX/VooSBrZIIPYPqwU1dXMvm3rGih0n6rjUPeCuPmkkP1ya4rmLZXjtDIR9P3tHysTalMa2OR9SWAtdnxfIbvXq6l1g5obG3cl7YK8nsjZgCdcHIwbo6xVca47AUwjS+2/MejXihAAGkh1i/UsWn2f4ABzUPCJ9VtBK2DvJibv0Wm+bJEDul2PyddJzqGGocVwtpYGpzM4wMnX1uFPwTjP43v84L5wmJvb/lD+OE/eKNR6Z7gjvxUbXN/jGLryC2iu+2HoJioMD/hpoaYlx5iQ178XHgEbGYhx0y6FSwU23jFmj5vzg8jNBBTFPvtb+W2Asw3ugJiPbYMDiFutVE9IcKD9ep9qje8GYm0RTwbdhmX92BmAvP/UsNlgAxa0thRSkDHE7bjRZHEHK0pliXOC778gtqQLgNvSss3chkv3ecLVrTaz+GJ21SEV4fbPWxTFmDbS50cdSEwFIxWZobkVxveeI+FaKLYaurY6NY2Wx+kvGLCB6Vt8QJ4WtmNiPZVNODSyTFOp1CgMh1HCGJbKXhWIk12nph7qN1Ni74qY5w49vJUQK0+LafC8ITO0HOpDcGQz62f8bHsZL0o13oPJ+DZK1lykbSuJb/LPoAvBLuO6K5adCZf2fzAzub/JNpi2pvNBtZncx8UmewPP0L4v8YkVsdO6NiJf0G26FOtok=
+  app: united99
+  on:
+    repo: alakijaayo/United
+    branch: main
