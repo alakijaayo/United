@@ -25,13 +25,28 @@ function Homepage() {
         <Typography variant="h4" align="center" className={styles.text}>Select Your Difficulty:</Typography>
       </Grid> 
       <Grid item xs={12} lg={4}>
-        <Button variant="contained" color="primary" className={styles.button}>Beginner</Button>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          className={styles.button}
+          href="beginner"
+        >Beginner</Button>
       </Grid>
       <Grid item xs={12} lg={4}>
-        <Button variant="contained" color="primary" className={styles.button}>Intermediate</Button>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          className={styles.button}
+          href="intermediate"
+        >Intermediate</Button>
       </Grid> 
       <Grid item xs={12} lg={4}>
-        <Button variant="contained" color="primary" className={styles.button}>Expert</Button>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          className={styles.button}
+          href="expert"
+        >Expert</Button>
       </Grid> 
     </Grid>  
   )  

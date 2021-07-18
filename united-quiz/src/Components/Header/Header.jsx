@@ -10,7 +10,11 @@ function Header() {
       <Toolbar>
         <Grid container spacing={3}>
           <Grid item xs={4} lg={4}>
-            <Button variant="outlined" color="secondary">Homepage</Button>
+            <Button 
+              variant="outlined" 
+              color="secondary"
+              href="/"
+            >Homepage</Button>
           </Grid>
           <Grid item xs={6} lg={6}>
             <Typography variant="h4" className={styles.title}>Manchester United Quiz</Typography>

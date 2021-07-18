@@ -12,7 +12,9 @@ function Footer() {
           <Grid item xs={4} lg={4}>
             <Typography variant="h5">Name:</Typography>
           </Grid>
-          <Grid item xs={4} lg={4} />
+          <Grid item xs={4} lg={4}>
+              <Typography variant="h5" className={styles.question}>Question: 0/25</Typography>
+          </Grid>
           <Grid item xs={4} lg={4}>
             <Typography variant="h5" className={styles.score}>Score: 0/25</Typography>  
           </Grid>

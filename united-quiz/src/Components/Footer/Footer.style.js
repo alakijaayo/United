@@ -5,8 +5,11 @@ export default makeStyles((theme) => ({
     top: 'auto',
     bottom: 0,
   },
+  question: {
+    marginLeft: theme.spacing(23)
+  },
   score: {
     marginLeft: theme.spacing(50)
-  }  
+  } 
 }),
 { name: 'Footer' })

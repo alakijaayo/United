@@ -12,8 +12,10 @@ export default makeStyles((theme) => ({
     padding: '15px',
     margin: '25px',
     minHeight: '60px',
-    minWidth: '200px',
-    marginLeft: theme.spacing(23)
+    minWidth: '250px',
+    marginLeft: theme.spacing(20),
+    fontWeight: 'bold',
+    fontSize: '20px'
   }
 }),
 { name: 'Homepage' })
