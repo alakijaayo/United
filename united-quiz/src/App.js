@@ -1,8 +1,14 @@
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import Routes from "./Pages/Routes";
 
 function App() {
   return (
-    <Header />
+    <>
+      <Header />
+      <Routes />
+      <Footer />
+    </>
   );
 }
 

@@ -5,11 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './Theme';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
-      <App />
+      <BrowserRouter>
+        <App /> 
+      </BrowserRouter>
     </React.StrictMode>
   </ThemeProvider>,
   document.getElementById('root')
