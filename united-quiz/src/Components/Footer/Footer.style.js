@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     marginLeft: theme.spacing(23)
   },
   score: {
-    marginLeft: theme.spacing(50)
+    marginLeft : theme.spacing(50) 
   } 
 }),
 { name: 'Footer' })

@@ -6,17 +6,23 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './Theme';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <App /> 
-      </BrowserRouter>
-    </React.StrictMode>
+    <Provider store={store}>
+        <BrowserRouter>
+          <App /> 
+        </BrowserRouter>
+    </Provider>
   </ThemeProvider>,
   document.getElementById('root')
 );
+
+if (module.hot) {
+  module.hot.accept();
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

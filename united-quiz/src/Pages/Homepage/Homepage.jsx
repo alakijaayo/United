@@ -1,9 +1,20 @@
 import { Button, Grid, TextField, Typography } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
 import React from 'react';
 import useStyles from './Homepage.style'
 
 function Homepage() {
   const styles = useStyles()
+  const dispatch = useDispatch()
+
+  const onChange = (e) => {
+    dispatch({ type: 'addName', payload: e.target.value });
+  }
+
+  const updateQuestion = () => {
+    dispatch({ type: 'updateQuestion'})
+  }
+
   return (
     <Grid container justifyContent="center">
       <Grid item xs={12} lg={12}>
@@ -18,8 +29,13 @@ function Homepage() {
       <Grid item xs={12} lg={12}>
         <Typography variant="h4" align="center" className={styles.text}>Please Insert Your Name:</Typography>
       </Grid> 
-      <Grid item xs={12} lg={3}>
-        <TextField variant="outlined" fullWidth className={styles.inputName} />
+      <Grid item xs={3} lg={3}>
+        <TextField 
+          variant="outlined" 
+          fullWidth 
+          className={styles.inputName}
+          onChange={onChange}
+        />
       </Grid>
       <Grid item xs={12} lg={12}>
         <Typography variant="h4" align="center" className={styles.text}>Select Your Difficulty:</Typography>
@@ -30,6 +46,7 @@ function Homepage() {
           color="primary" 
           className={styles.button}
           href="beginner"
+          onClick={updateQuestion}
         >Beginner</Button>
       </Grid>
       <Grid item xs={12} lg={4}>
@@ -38,6 +55,7 @@ function Homepage() {
           color="primary" 
           className={styles.button}
           href="intermediate"
+          onClick={updateQuestion}
         >Intermediate</Button>
       </Grid> 
       <Grid item xs={12} lg={4}>
@@ -46,6 +64,7 @@ function Homepage() {
           color="primary" 
           className={styles.button}
           href="expert"
+          onClick={updateQuestion}
         >Expert</Button>
       </Grid> 
     </Grid>  
