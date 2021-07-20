@@ -15,7 +15,7 @@ function Footer() {
       <Toolbar>
         <Grid container spacing={3}>
           <Grid item xs={4} lg={4}>
-            <Typography variant="h5">{`Name: ${username}`}</Typography>
+            <Typography variant="h5" className={styles.username}>{`Name: ${username}`}</Typography>
           </Grid>
           <Grid item xs={4} lg={4}>
               <Typography variant="h5" className={styles.question}>{`Question: ${questionNumber}/25`}</Typography>

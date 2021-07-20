@@ -1,10 +1,17 @@
 import { createStore } from 'redux';
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 const initialState = {
   score: 0,
   question: 0,
   name: '',
 }
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
 
 function reducer(state = initialState, action) {
   switch(action.type) {
@@ -15,10 +22,14 @@ function reducer(state = initialState, action) {
     case 'updateQuestion':
       return { ...state, question: state.question + 1 };
     case 'resetState':
-      return initialState;
+      return state = initialState;
     default:
       return {...state};      
   }
 }
 
-export const store = createStore(reducer)
+const persistedReducer = persistReducer(persistConfig, reducer);
+
+export const store = createStore(persistedReducer, initialState);
+
+export const persistor = persistStore(store);

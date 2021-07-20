@@ -5,11 +5,16 @@ export default makeStyles((theme) => ({
     top: 'auto',
     bottom: 0,
   },
+  username: {
+    fontWeight: 'bold'
+  },
   question: {
-    marginLeft: theme.spacing(23)
+    marginLeft: theme.spacing(23),
+    fontWeight: 'bold'
   },
   score: {
-    marginLeft : theme.spacing(50) 
+    marginLeft : theme.spacing(47),
+    fontWeight: 'bold' 
   } 
 }),
 { name: 'Footer' })

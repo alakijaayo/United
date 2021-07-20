@@ -47,7 +47,9 @@ function Homepage() {
           className={styles.button}
           href="beginner"
           onClick={updateQuestion}
-        >Beginner</Button>
+        >
+          Beginner
+        </Button>
       </Grid>
       <Grid item xs={12} lg={4}>
         <Button 
@@ -56,7 +58,9 @@ function Homepage() {
           className={styles.button}
           href="intermediate"
           onClick={updateQuestion}
-        >Intermediate</Button>
+        >
+          Intermediate
+        </Button>
       </Grid> 
       <Grid item xs={12} lg={4}>
         <Button 
@@ -65,7 +69,9 @@ function Homepage() {
           className={styles.button}
           href="expert"
           onClick={updateQuestion}
-        >Expert</Button>
+        >
+          Expert
+        </Button>
       </Grid> 
     </Grid>  
   )  
