@@ -12,20 +12,40 @@ function Footer() {
 
   return (
     <AppBar position="fixed" className={styles.appBar}>
-      <Toolbar>
-        <Grid container spacing={3}>
-          <Grid item xs={4} lg={4}>
-            <Typography variant="h5" className={styles.username}>{`Name: ${username}`}</Typography>
-          </Grid>
-          <Grid item xs={4} lg={4}>
-              <Typography variant="h5" className={styles.question}>{`Question: ${questionNumber}/25`}</Typography>
-          </Grid>
-          <Grid item xs={4} lg={4}>
-            <Typography variant="h5"  className={styles.score}>{`Score: ${score}/25`}</Typography>  
-          </Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
+        <Toolbar>
+          <div className={styles.root}>
+            <Grid container>
+              <Grid item xs={12} lg={5}>
+                <Typography 
+                  variant="h4" 
+                  className={styles.text}
+                  data-cy="username"
+                >
+                  {`Name: ${username}`}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} lg={5}>
+                  <Typography 
+                    variant="h4" 
+                    className={styles.text}
+                    data-cy="question"
+                  >
+                    {`Question: ${questionNumber}/25`}
+                  </Typography>
+              </Grid>
+              <Grid item xs={12} lg={2}>
+                <Typography 
+                  variant="h4"  
+                  className={styles.text}
+                  data-cy="score"
+                >
+                  {`My Score: ${score}/25`}
+                </Typography>  
+              </Grid>
+            </Grid>
+          </div>
+        </Toolbar>
+      </AppBar>
   )
 }
 

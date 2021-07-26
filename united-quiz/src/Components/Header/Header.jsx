@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { useDispatch } from 'react-redux';
-import { Button, Toolbar, Typography, Grid } from '@material-ui/core';
+import { Button, Toolbar, Typography, Grid, Box } from '@material-ui/core';
 import useStyles from './Header.style';
 
 function Header() {
@@ -15,30 +15,40 @@ function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Grid container spacing={3}>
-          <Grid item xs={4} lg={4}>
-            <Button 
-              variant="outlined" 
-              color="secondary"
-              onClick={onClick}
-              href="/"
-            >
-              Homepage
-            </Button>
+        <div className={styles.root}>
+          <Grid container align="center">
+            <Box justifyContent="flex-start">
+              <Button 
+                variant="outlined" 
+                color="secondary"
+                onClick={onClick}
+                href="/"
+                data-cy="homepage"
+              >
+                Homepage
+              </Button>
+            </Box>
+            <Grid item xs>
+                <Typography 
+                  variant="h4"
+                  className={styles.title}
+                  data-cy="title"
+                >
+                  Manchester United Quiz
+                </Typography>
+            </Grid>
+              <Box justifyContent="flex-end">
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  className={styles.leaderboard}
+                  data-cy="leaderboard"
+                >
+                  Leaderboard
+                </Button>  
+              </Box>
           </Grid>
-          <Grid item xs={4} lg={4}>
-            <Typography variant="h4" className={styles.title}>Manchester United Quiz</Typography>
-          </Grid>
-          <Grid item xs={4} lg={4}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              className={styles.leaderboard}
-            >
-              Leaderboard
-            </Button>  
-          </Grid>
-        </Grid>
+        </div>
       </Toolbar>  
     </AppBar>
   )

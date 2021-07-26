@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  root: {
+    maxHeight: '100%'
+  },
   text: {
     fontWeight: 'bold',
     margin: '20px'
@@ -13,9 +16,11 @@ export default makeStyles((theme) => ({
     margin: '25px',
     minHeight: '60px',
     minWidth: '250px',
-    marginLeft: theme.spacing(20),
     fontWeight: 'bold',
-    fontSize: '20px'
+    fontSize: '20px',
+    '&:hover': {
+      backgroundColor: '#000000'
+    },
   }
 }),
 { name: 'Homepage' })
