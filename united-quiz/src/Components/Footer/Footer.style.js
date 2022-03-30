@@ -1,18 +1,28 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    flexGrow: 1
-  },
-  appBar: {
-    top: 'auto',
-    bottom: 0,
-    width: '100%'
-  },
-  text: {
-    fontWeight: 'bold',
-    padding: theme.spacing(1),
-  }
-}),
-{ name: 'Footer' })
+export default makeStyles(
+  (theme) => ({
+    toolbar: {
+      maxWidth: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+    },
+    appBar: {
+      top: "auto",
+      bottom: 0,
+    },
+    nameText: {
+      fontWeight: "bold",
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+      },
+    },
+    text: {
+      fontWeight: "bold",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "20px",
+      },
+    },
+  }),
+  { name: "Footer" }
+);

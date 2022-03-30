@@ -92,8 +92,8 @@
                         <configuration>
                             <arguments>install</arguments>
                         </configuration>
-					</execution>
-					<execution>
+					          </execution>
+					          <execution>
                         <id>npm run build</id>
                         <goals>
                             <goal>npm</goal>
